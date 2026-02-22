@@ -21,7 +21,6 @@ const getNotesBySubject = async (req, res) => {
 const createNote = async (req, res) => {
     try {
         const supabase = getAuthClient(req.token);
-        console.log(req.body);
         const { subject_id, title, content_url } = req.body;
 
         // Check if Teacher owns the subject

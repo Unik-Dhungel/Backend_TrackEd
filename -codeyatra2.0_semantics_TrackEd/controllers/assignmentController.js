@@ -89,9 +89,6 @@ const gradeSubmission = async (req, res) => {
         const { submissionId } = req.params;
         const { grade, feedback } = req.body;
 
-        // Technically should check if teacher owns the assignment's subject, 
-        // but simplifying for MVP: role based access is active.
-
         const { data, error } = await supabase
             .from('submissions')
             .update({ grade, feedback, status: 'graded' })

@@ -8,7 +8,6 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
-// Routes Placeholder
 app.get('/api/health', (req, res) => {
     res.json({ success: true, message: 'TrackEd MVP API is running' });
 });
@@ -18,14 +17,12 @@ const authRoutes = require('./routes/authRoutes');
 const subjectRoutes = require('./routes/subjectRoutes');
 const noteRoutes = require('./routes/noteRoutes');
 const assignmentRoutes = require('./routes/assignmentRoutes');
-// const attendanceRoutes = require('./routes/attendanceRoutes');
 
 // Mount Routes
 app.use('/api/auth', authRoutes);
 app.use('/api/subjects', subjectRoutes);
 app.use('/api/notes', noteRoutes);
 app.use('/api/assignments', assignmentRoutes);
-// app.use('/api/attendance', attendanceRoutes);
 
 // Error Handling Middleware
 app.use((err, req, res, next) => {
