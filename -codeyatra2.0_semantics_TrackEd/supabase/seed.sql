@@ -1,0 +1,9 @@
+-- Example Insert Statements (Assuming users already exist in auth.users)
+-- Replace the UUIDs with actual user UUIDs from Auth
+-- INSERT INTO users (id, role, full_name, email) VALUES
+--   ('uuid-for-teacher', 'teacher', 'John Doe', 'john@college.edu'),
+--   ('uuid-for-student', 'student', 'Jane Smith', 'jane@college.edu');
+-- INSERT INTO subjects (id, title, description, teacher_id) VALUES
+--   ('uuid-subject-1', 'Database Systems', 'Intro to DBMS', 'uuid-for-teacher');
+-- INSERT INTO enrollments (student_id, subject_id) VALUES
+--   ('uuid-for-student', 'uuid-subject-1');
